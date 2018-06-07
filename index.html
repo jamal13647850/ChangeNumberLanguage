@@ -5,7 +5,7 @@
 		<title>Change Number Language</title>
 	</head>
 	<body>
-		<input type=number onkeyup="AutoFarsiNum('#inputid');"/>
+		<input type=text id=inputid onkeyup="AutoFarsiNum('inputid');"/>
 	</body>
 	<script>
 		function AutoFarsiNum(btnid){
@@ -20,6 +20,7 @@
 			val=val.replace(/7/g,'۷');
 			val=val.replace(/8/g,'۸');
 			val=val.replace(/9/g,'۹');
+			console.log(val);
 			document.getElementById(btnid).value=val;
 		}
 
