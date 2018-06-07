@@ -5,7 +5,8 @@
 		<title>Change Number Language</title>
 	</head>
 	<body>
-		<input type=text id=inputid onkeyup="AutoFarsiNum('inputid');"/>
+		<input type=text id=toPersian onkeyup="AutoFarsiNum('toPersian');"/>
+		<input type=text id=toEnglish onkeyup="AutoEnglishNum('toEnglish');"/>
 	</body>
 	<script>
 		function AutoFarsiNum(btnid){
@@ -20,6 +21,21 @@
 			val=val.replace(/7/g,'۷');
 			val=val.replace(/8/g,'۸');
 			val=val.replace(/9/g,'۹');
+			console.log(val);
+			document.getElementById(btnid).value=val;
+		}
+		function AutoEnglishNum(btnid){
+			var val=document.getElementById(btnid).value;
+			val=val.replace(/۰/g,'0');
+			val=val.replace(/۱/g,'1');
+			val=val.replace(/۲/g,'2');
+			val=val.replace(/۳/g,'3');
+			val=val.replace(/۴/g,'4');
+			val=val.replace(/۵/g,'5');
+			val=val.replace(/۶/g,'6');
+			val=val.replace(/۷/g,'7');
+			val=val.replace(/۸/g,'8');
+			val=val.replace(/۹/g,'9');
 			console.log(val);
 			document.getElementById(btnid).value=val;
 		}
